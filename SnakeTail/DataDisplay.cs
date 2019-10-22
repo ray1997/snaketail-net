@@ -56,15 +56,27 @@ namespace SnakeTail
             settingPanel.Visible = settingState.Checked;
         }
 
-        public void DisplayData(string line)
-        {
-
-        }
-
         private void DataDisplay_Shown(object sender, EventArgs e)
             => IsOpen = true;
 
         private void DataDisplay_FormClosed(object sender, FormClosedEventArgs e)
             => IsOpen = false;
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            this.ControlBox = checkBox1.Checked;
+        }
+
+        private void CheckBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            this.TopMost = checkBox2.Checked;
+        }
+
+        public void DisplayData(string line)
+        {
+            //Processing line of texts
+
+        }
+
     }
 }
