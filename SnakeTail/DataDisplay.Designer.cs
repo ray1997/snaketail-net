@@ -45,6 +45,8 @@
             this.killer_type = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.mainMenu.SuspendLayout();
             this.settingPanel.SuspendLayout();
@@ -82,6 +84,8 @@
             // 
             this.settingPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.settingPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.settingPanel.Controls.Add(this.button2);
+            this.settingPanel.Controls.Add(this.label5);
             this.settingPanel.Controls.Add(this.checkBox2);
             this.settingPanel.Controls.Add(this.checkBox1);
             this.settingPanel.Controls.Add(this.button1);
@@ -141,7 +145,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(14, 181);
+            this.checkBox1.Location = new System.Drawing.Point(14, 301);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(161, 42);
@@ -172,7 +176,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(14, 237);
+            this.checkBox2.Location = new System.Drawing.Point(14, 357);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(149, 42);
@@ -222,11 +226,33 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 386);
+            this.label4.Location = new System.Drawing.Point(17, 373);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 38);
             this.label4.TabIndex = 7;
             this.label4.Text = "0";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(14, 212);
+            this.button2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(166, 51);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Set color";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label5.Location = new System.Drawing.Point(9, 176);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(203, 29);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Transparent color";
             // 
             // DataDisplay
             // 
@@ -269,5 +295,7 @@
         private System.Windows.Forms.PictureBox killer_preview;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
     }
 }

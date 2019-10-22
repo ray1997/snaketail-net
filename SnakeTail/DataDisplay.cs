@@ -50,7 +50,21 @@ namespace SnakeTail
                 }
             }                
         }
-
+        
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            using (ColorDialog color = new ColorDialog
+            {
+                Color = this.TransparencyKey
+            })
+            {
+                var result = color.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    this.TransparencyKey = color.Color;
+                }
+            }
+        }
         private void ToolStripMenuItem1_CheckedChanged(object sender, EventArgs e)
         {
             settingPanel.Visible = settingState.Checked;
@@ -77,6 +91,5 @@ namespace SnakeTail
             //Processing line of texts
 
         }
-
     }
 }
