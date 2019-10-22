@@ -186,9 +186,9 @@ namespace SnakeTail
                 case "Temple": SetText(map_subrealm, "The Temple of Purgation"); break;
 
                 case "Street":
-                    if (mapRealm.Text == "Sub")
+                    if (mapinfo[0] == "Sub")
                         SetText(map_subrealm, "Lampkin Lane");
-                    else if (mapRealm.Text == "Eng")
+                    else if (mapinfo[0] == "Eng")
                         SetText(map_subrealm, $"Badham Preschool {IDIndexToRoman(mapinfo[2])}");
                     break;
                 case "Hideout": SetText(map_subrealm, "The Game"); break;
