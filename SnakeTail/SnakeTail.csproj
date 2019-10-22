@@ -216,6 +216,56 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\log.ico" />
+    <Content Include="dbd\char\BP_Slasher_Character_00_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_01_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_02_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_03_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_04_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_05_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_06_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_07_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_08_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_09_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_10_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_11_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_12_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_13_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_14_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_15_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_16_C_0.png" />
+    <Content Include="dbd\char\BP_Slasher_Character_17_C_0.png" />
+    <Content Include="dbd\map\iconMap_Asy_Asylum.png" />
+    <Content Include="dbd\map\iconMap_Asy_Chapel.png" />
+    <Content Include="dbd\map\iconMap_Brl_MaHouse.png" />
+    <Content Include="dbd\map\iconMap_Brl_Temple.png" />
+    <Content Include="dbd\map\iconMap_Eng_ElmStreet.png" />
+    <Content Include="dbd\map\iconMap_Eng_ElmStreet02.png" />
+    <Content Include="dbd\map\iconMap_Eng_ElmStreet03.png" />
+    <Content Include="dbd\map\iconMap_Eng_ElmStreet04.png" />
+    <Content Include="dbd\map\iconMap_Eng_ElmStreet05.png" />
+    <Content Include="dbd\map\iconMap_Fin_TheGame.png" />
+    <Content Include="dbd\map\iconMap_Frm_Barn.png" />
+    <Content Include="dbd\map\iconMap_Frm_Cornfield.png" />
+    <Content Include="dbd\map\iconMap_Frm_Farmhouse.png" />
+    <Content Include="dbd\map\iconMap_Frm_Silo.png" />
+    <Content Include="dbd\map\iconMap_Frm_Slaughterhouse.png" />
+    <Content Include="dbd\map\iconMap_Hos_Treatment.png" />
+    <Content Include="dbd\map\iconMap_Hti_Manor.png" />
+    <Content Include="dbd\map\iconMap_Ind_CoalTower.png" />
+    <Content Include="dbd\map\iconMap_Ind_Forest.png" />
+    <Content Include="dbd\map\iconMap_Ind_Foundry.png" />
+    <Content Include="dbd\map\iconMap_Ind_Mine.png" />
+    <Content Include="dbd\map\iconMap_Ind_Storehouse.png" />
+    <Content Include="dbd\map\iconMap_Jnk_Garage.png" />
+    <Content Include="dbd\map\iconMap_Jnk_GasStation.png" />
+    <Content Include="dbd\map\iconMap_Jnk_Lodge.png" />
+    <Content Include="dbd\map\iconMap_Jnk_Office.png" />
+    <Content Include="dbd\map\iconMap_Jnk_Scrapyard.png" />
+    <Content Include="dbd\map\iconMap_Kny_Cottage.png" />
+    <Content Include="dbd\map\iconMap_Qat_Lab.png" />
+    <Content Include="dbd\map\iconMap_Sub_Street.png" />
+    <Content Include="dbd\map\iconMap_Swp_GrimPantry.png" />
+    <Content Include="dbd\map\iconMap_Swp_PaleRose.png" />
     <Content Include="Icons\bullet ball glass green.ico" />
     <Content Include="Icons\bullet ball glass yellow.ico" />
     <Content Include="Icons\Error.png" />
@@ -250,6 +300,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
