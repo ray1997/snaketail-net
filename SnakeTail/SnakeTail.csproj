@@ -234,6 +234,7 @@
     <Content Include="dbd\char\BP_Slasher_Character_15_C_0.png" />
     <Content Include="dbd\char\BP_Slasher_Character_16_C_0.png" />
     <Content Include="dbd\char\BP_Slasher_Character_17_C_0.png" />
+    <Content Include="dbd\map\iconMap_All.png" />
     <Content Include="dbd\map\iconMap_Asy_Asylum.png" />
     <Content Include="dbd\map\iconMap_Asy_Chapel.png" />
     <Content Include="dbd\map\iconMap_Brl_MaHouse.png" />

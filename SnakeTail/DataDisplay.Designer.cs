@@ -70,7 +70,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(367, 217);
+            this.panel1.Size = new System.Drawing.Size(405, 213);
             this.panel1.TabIndex = 0;
             // 
             // mainMenu
@@ -101,10 +101,10 @@
             this.settingPanel.Controls.Add(this.label2);
             this.settingPanel.Controls.Add(this.label1);
             this.settingPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.settingPanel.Location = new System.Drawing.Point(163, 0);
+            this.settingPanel.Location = new System.Drawing.Point(201, 0);
             this.settingPanel.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.settingPanel.Name = "settingPanel";
-            this.settingPanel.Size = new System.Drawing.Size(204, 217);
+            this.settingPanel.Size = new System.Drawing.Size(204, 213);
             this.settingPanel.TabIndex = 0;
             this.settingPanel.Visible = false;
             // 
@@ -197,7 +197,7 @@
             // 
             this.offerNameKiller.AutoSize = true;
             this.offerNameKiller.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.offerNameKiller.Location = new System.Drawing.Point(82, 129);
+            this.offerNameKiller.Location = new System.Drawing.Point(94, 129);
             this.offerNameKiller.Name = "offerNameKiller";
             this.offerNameKiller.Size = new System.Drawing.Size(0, 32);
             this.offerNameKiller.TabIndex = 6;
@@ -206,20 +206,22 @@
             // 
             this.killer_type.AutoSize = true;
             this.killer_type.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.killer_type.Location = new System.Drawing.Point(82, 97);
+            this.killer_type.Location = new System.Drawing.Point(94, 97);
             this.killer_type.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.killer_type.Name = "killer_type";
-            this.killer_type.Size = new System.Drawing.Size(75, 32);
+            this.killer_type.Size = new System.Drawing.Size(229, 32);
             this.killer_type.TabIndex = 5;
-            this.killer_type.Text = "Killer";
+            this.killer_type.Text = "Killer is... not nea..";
             // 
             // killer_preview
             // 
             this.killer_preview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.killer_preview.Image = ((System.Drawing.Image)(resources.GetObject("killer_preview.Image")));
             this.killer_preview.Location = new System.Drawing.Point(6, 97);
             this.killer_preview.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.killer_preview.Name = "killer_preview";
-            this.killer_preview.Size = new System.Drawing.Size(64, 86);
+            this.killer_preview.Size = new System.Drawing.Size(76, 100);
+            this.killer_preview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.killer_preview.TabIndex = 4;
             this.killer_preview.TabStop = false;
             // 
@@ -227,31 +229,33 @@
             // 
             this.map_subrealm.AutoSize = true;
             this.map_subrealm.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.map_subrealm.Location = new System.Drawing.Point(82, 45);
+            this.map_subrealm.Location = new System.Drawing.Point(94, 47);
             this.map_subrealm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.map_subrealm.Name = "map_subrealm";
-            this.map_subrealm.Size = new System.Drawing.Size(128, 32);
+            this.map_subrealm.Size = new System.Drawing.Size(124, 32);
             this.map_subrealm.TabIndex = 3;
-            this.map_subrealm.Text = "sub realm";
+            this.map_subrealm.Text = "we\'ll see..";
             // 
             // mapRealm
             // 
             this.mapRealm.AutoSize = true;
             this.mapRealm.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mapRealm.Location = new System.Drawing.Point(82, 7);
+            this.mapRealm.Location = new System.Drawing.Point(94, 9);
             this.mapRealm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mapRealm.Name = "mapRealm";
-            this.mapRealm.Size = new System.Drawing.Size(137, 32);
+            this.mapRealm.Size = new System.Drawing.Size(257, 32);
             this.mapRealm.TabIndex = 2;
-            this.mapRealm.Text = "map realm";
+            this.mapRealm.Text = "It could be any map..";
             // 
             // mapPreview
             // 
             this.mapPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mapPreview.Image = ((System.Drawing.Image)(resources.GetObject("mapPreview.Image")));
             this.mapPreview.Location = new System.Drawing.Point(6, 7);
             this.mapPreview.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.mapPreview.Name = "mapPreview";
-            this.mapPreview.Size = new System.Drawing.Size(64, 86);
+            this.mapPreview.Size = new System.Drawing.Size(76, 72);
+            this.mapPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.mapPreview.TabIndex = 1;
             this.mapPreview.TabStop = false;
             // 
@@ -319,7 +323,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 217);
+            this.ClientSize = new System.Drawing.Size(405, 213);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
