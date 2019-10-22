@@ -33,8 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.settingState = new System.Windows.Forms.ToolStripMenuItem();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.offerNameKiller = new System.Windows.Forms.Label();
             this.killer_type = new System.Windows.Forms.Label();
             this.killer_preview = new System.Windows.Forms.PictureBox();
             this.map_subrealm = new System.Windows.Forms.Label();
@@ -50,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.chars = new System.Windows.Forms.ImageList(this.components);
             this.maps = new System.Windows.Forms.ImageList(this.components);
-            this.offerNameKiller = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.mainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.killer_preview)).BeginInit();
@@ -61,9 +59,7 @@
             // panel1
             // 
             this.panel1.ContextMenuStrip = this.mainMenu;
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.offerNameKiller);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.killer_type);
             this.panel1.Controls.Add(this.killer_preview);
             this.panel1.Controls.Add(this.map_subrealm);
@@ -74,7 +70,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(861, 426);
+            this.panel1.Size = new System.Drawing.Size(693, 300);
             this.panel1.TabIndex = 0;
             // 
             // mainMenu
@@ -93,28 +89,19 @@
             this.settingState.Text = "Settings";
             this.settingState.CheckedChanged += new System.EventHandler(this.ToolStripMenuItem1_CheckedChanged);
             // 
-            // label4
+            // offerNameKiller
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 373);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 38);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 335);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(280, 38);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Estimated bloodpoint";
+            this.offerNameKiller.AutoSize = true;
+            this.offerNameKiller.Location = new System.Drawing.Point(141, 185);
+            this.offerNameKiller.Name = "offerNameKiller";
+            this.offerNameKiller.Size = new System.Drawing.Size(208, 38);
+            this.offerNameKiller.TabIndex = 6;
+            this.offerNameKiller.Text = "[offering name]";
             // 
             // killer_type
             // 
             this.killer_type.AutoSize = true;
-            this.killer_type.Location = new System.Drawing.Point(159, 182);
+            this.killer_type.Location = new System.Drawing.Point(141, 147);
             this.killer_type.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.killer_type.Name = "killer_type";
             this.killer_type.Size = new System.Drawing.Size(79, 38);
@@ -123,7 +110,7 @@
             // 
             // killer_preview
             // 
-            this.killer_preview.Location = new System.Drawing.Point(24, 182);
+            this.killer_preview.Location = new System.Drawing.Point(6, 147);
             this.killer_preview.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.killer_preview.Name = "killer_preview";
             this.killer_preview.Size = new System.Drawing.Size(123, 136);
@@ -133,7 +120,7 @@
             // map_subrealm
             // 
             this.map_subrealm.AutoSize = true;
-            this.map_subrealm.Location = new System.Drawing.Point(159, 71);
+            this.map_subrealm.Location = new System.Drawing.Point(141, 45);
             this.map_subrealm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.map_subrealm.Name = "map_subrealm";
             this.map_subrealm.Size = new System.Drawing.Size(139, 38);
@@ -143,7 +130,7 @@
             // mapRealm
             // 
             this.mapRealm.AutoSize = true;
-            this.mapRealm.Location = new System.Drawing.Point(159, 29);
+            this.mapRealm.Location = new System.Drawing.Point(141, 7);
             this.mapRealm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mapRealm.Name = "mapRealm";
             this.mapRealm.Size = new System.Drawing.Size(149, 38);
@@ -152,7 +139,7 @@
             // 
             // mapPreview
             // 
-            this.mapPreview.Location = new System.Drawing.Point(24, 32);
+            this.mapPreview.Location = new System.Drawing.Point(6, 7);
             this.mapPreview.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.mapPreview.Name = "mapPreview";
             this.mapPreview.Size = new System.Drawing.Size(123, 136);
@@ -171,42 +158,44 @@
             this.settingPanel.Controls.Add(this.label2);
             this.settingPanel.Controls.Add(this.label1);
             this.settingPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.settingPanel.Location = new System.Drawing.Point(523, 0);
+            this.settingPanel.Location = new System.Drawing.Point(358, 0);
             this.settingPanel.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.settingPanel.Name = "settingPanel";
-            this.settingPanel.Size = new System.Drawing.Size(338, 426);
+            this.settingPanel.Size = new System.Drawing.Size(335, 300);
             this.settingPanel.TabIndex = 0;
             this.settingPanel.Visible = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(14, 212);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.button2.Location = new System.Drawing.Point(240, 103);
             this.button2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 51);
+            this.button2.Size = new System.Drawing.Size(82, 43);
             this.button2.TabIndex = 6;
-            this.button2.Text = "Set color";
+            this.button2.Text = "Set";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label5.Location = new System.Drawing.Point(9, 176);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.Location = new System.Drawing.Point(9, 113);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(203, 29);
+            this.label5.Size = new System.Drawing.Size(165, 25);
             this.label5.TabIndex = 5;
             this.label5.Text = "Transparent color";
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(14, 312);
+            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.checkBox2.Location = new System.Drawing.Point(12, 200);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(149, 42);
+            this.checkBox2.Size = new System.Drawing.Size(114, 32);
             this.checkBox2.TabIndex = 4;
             this.checkBox2.Text = "top most";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -217,10 +206,11 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(14, 277);
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.checkBox1.Location = new System.Drawing.Point(14, 162);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(161, 42);
+            this.checkBox1.Size = new System.Drawing.Size(121, 32);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Show title";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -228,23 +218,24 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(14, 116);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.button1.Location = new System.Drawing.Point(240, 41);
             this.button1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 51);
+            this.button1.Size = new System.Drawing.Size(82, 47);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Set color";
+            this.button1.Text = "Set";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label2.Location = new System.Drawing.Point(9, 80);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(9, 53);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 29);
+            this.label2.Size = new System.Drawing.Size(117, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Background";
             // 
@@ -252,7 +243,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label1.Location = new System.Drawing.Point(8, 30);
+            this.label1.Location = new System.Drawing.Point(6, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 36);
@@ -319,20 +310,11 @@
             this.maps.Images.SetKeyName(30, "iconMap_Swp_GrimPantry.png");
             this.maps.Images.SetKeyName(31, "iconMap_Swp_PaleRose.png");
             // 
-            // offerNameKiller
-            // 
-            this.offerNameKiller.AutoSize = true;
-            this.offerNameKiller.Location = new System.Drawing.Point(159, 226);
-            this.offerNameKiller.Name = "offerNameKiller";
-            this.offerNameKiller.Size = new System.Drawing.Size(208, 38);
-            this.offerNameKiller.TabIndex = 6;
-            this.offerNameKiller.Text = "[offering name]";
-            // 
             // DataDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 426);
+            this.ClientSize = new System.Drawing.Size(693, 300);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
@@ -367,8 +349,6 @@
         private System.Windows.Forms.Label map_subrealm;
         private System.Windows.Forms.Label killer_type;
         private System.Windows.Forms.PictureBox killer_preview;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ImageList chars;

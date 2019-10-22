@@ -92,6 +92,16 @@ namespace SnakeTail
             //Offering
             if (line.Contains("GameFlow: OnlineContextComponent::SendOfferingsDataToUI"))
             {
+                //Reset match info
+                if (!offerNameKiller.Text.StartsWith("w/ "))
+                {
+                    mapPreview.Image = null;
+                    mapRealm.Text = "Loading...";
+                    map_subrealm.Text = "Loading...";
+                    killer_preview.Image = chars.Images[0];
+                    killer_type.Text = "Definitely not nea...";
+                    offerNameKiller.Text = "";
+                }
                 //Offering
                 if (line.Contains("mori"))
                 {
@@ -125,113 +135,110 @@ namespace SnakeTail
             //Map theme
             switch (mapinfo[0])
             {
-                case "Ind": mapRealm.Text = "The MacMillan Estate"; break;
-                case "Jnk": mapRealm.Text = "Autohaven Wreckers"; break;
-                case "Frm": mapRealm.Text = "Coldwind Farm"; break;
-                case "Asy": mapRealm.Text = "Crotus Prenn Asylum"; break;
-                case "Sub": mapRealm.Text = "Haddonfield"; break;
-                case "Swp": mapRealm.Text = "Backwater Swamp"; break;
-                case "Hos": mapRealm.Text = "Léry's Memorial Institute"; break;
-                case "Brl": mapRealm.Text = "Red Forest"; break;
-                case "Eng": mapRealm.Text = "Springwood"; break;
-                case "Fin": mapRealm.Text = "Finland"; break;
-                case "Hti": mapRealm.Text = "Yamaoka Estate"; break;
-                case "Kny": mapRealm.Text = "Ormond"; break;
-                case "Qat": mapRealm.Text = "Hawkins National Laboratory"; break;
+                case "Ind": SetText(mapRealm, "The MacMillan Estate"); break;
+                case "Jnk": SetText(mapRealm, "Autohaven Wreckers"); break;
+                case "Frm": SetText(mapRealm, "Coldwind Farm"); break;
+                case "Asy": SetText(mapRealm, "Crotus Prenn Asylum"); break;
+                case "Sub": SetText(mapRealm, "Haddonfield"); break;
+                case "Swp": SetText(mapRealm, "Backwater Swamp"); break;
+                case "Hos": SetText(mapRealm, "Léry's Memorial Institute"); break;
+                case "Brl": SetText(mapRealm, "Red Forest"); break;
+                case "Eng": SetText(mapRealm, "Springwood"); break;
+                case "Fin": SetText(mapRealm, "Finland"); break;
+                case "Hti": SetText(mapRealm, "Yamaoka Estate"); break;
+                case "Kny": SetText(mapRealm, "Ormond"); break;
+                case "Qat": SetText(mapRealm, "Hawkins National Laboratory"); break;
             }
             //Sub realm
             switch (mapinfo[1])
             {
-                case "CoalTower":
-                    map_subrealm.Text = "Coal Tower";
-                    break;
-                case "Storehouse": map_subrealm.Text = "Groaning Storehouse"; break;
-                case "Foundry": map_subrealm.Text = "Ironworks of Misery"; break;
-                case "Forest": map_subrealm.Text = "Shelter Woods"; break;
-                case "Mine": map_subrealm.Text = "Suffocation Pit"; break;
+                case "CoalTower": SetText(map_subrealm, "Coal Tower"); break;
+                case "Storehouse": SetText(map_subrealm, "Groaning Storehouse"); break;
+                case "Foundry": SetText(map_subrealm, "Ironworks of Misery"); break;
+                case "Forest": SetText(map_subrealm, "Shelter Woods"); break;
+                case "Mine": SetText(map_subrealm, "Suffocation Pit"); break;
 
-                case "Office": map_subrealm.Text = "Azarov's Resting Place"; break;
-                case "Lodge": map_subrealm.Text = "Blood Lodge"; break;
-                case "GasStation": map_subrealm.Text = "Gas Heaven"; break;
-                case "Garage": map_subrealm.Text = "Wretched Shop"; break;
-                case "Scrapyard": map_subrealm.Text = "Wreckers' Yard"; break;
+                case "Office": SetText(map_subrealm, "Azarov's Resting Place"); break;
+                case "Lodge": SetText(map_subrealm, "Blood Lodge"); break;
+                case "GasStation": SetText(map_subrealm, "Gas Heaven"); break;
+                case "Garage": SetText(map_subrealm, "Wretched Shop"); break;
+                case "Scrapyard": SetText(map_subrealm, "Wreckers' Yard"); break;
 
-                case "Barn": map_subrealm.Text = "Fractured Cow Shed"; break;
-                case "Farmhouse": map_subrealm.Text = "The Thompson House"; break;
-                case "Silo": map_subrealm.Text = "Torment Creek"; break;
-                case "Slaughterhouse": map_subrealm.Text = "Rancid Abattoir"; break;
-                case "Cornfield": map_subrealm.Text = "Rotten Field"; break;
+                case "Barn": SetText(map_subrealm, "Fractured Cow Shed"); break;
+                case "Farmhouse": SetText(map_subrealm, "The Thompson House"); break;
+                case "Silo": SetText(map_subrealm, "Torment Creek"); break;
+                case "Slaughterhouse": SetText(map_subrealm, "Rancid Abattoir"); break;
+                case "Cornfield": SetText(map_subrealm, "Rotten Field"); break;
 
-                case "Asylum": map_subrealm.Text = "Disturbed Ward"; break;
-                case "Chapel": map_subrealm.Text = "Father Campbell's Chapel"; break;
+                case "Asylum": SetText(map_subrealm, "Disturbed Ward"); break;
+                case "Chapel": SetText(map_subrealm, "Father Campbell's Chapel"); break;
 
-                case "Palerose": map_subrealm.Text = "The Pale Rose"; break;
-                case "GrimPantry": map_subrealm.Text = "Grim Pantry"; break;
+                case "Palerose": SetText(map_subrealm, "The Pale Rose"); break;
+                case "GrimPantry": SetText(map_subrealm, "Grim Pantry"); break;
 
-                case "Threatment": map_subrealm.Text = "Treatment Theatre"; break;
+                case "Threatment": SetText(map_subrealm, "Treatment Theatre"); break;
 
-                case "MaHouse": map_subrealm.Text = "Mother's Dwelling"; break;
-                case "Temple": map_subrealm.Text = "The Temple of Purgation"; break;
+                case "MaHouse": SetText(map_subrealm, "Mother's Dwelling"); break;
+                case "Temple": SetText(map_subrealm, "The Temple of Purgation"); break;
 
                 case "Street":
                     if (mapRealm.Text == "Sub")
-                        map_subrealm.Text = "Lampkin Lane";
+                        SetText(map_subrealm, "Lampkin Lane");
                     else if (mapRealm.Text == "Eng")
-                        map_subrealm.Text = $"Badham Preschool {IDIndexToRoman(mapinfo[2])}";
+                        SetText(map_subrealm, $"Badham Preschool {IDIndexToRoman(mapinfo[2])}");
                     break;
-                case "Hideout": map_subrealm.Text = "The Game"; break;
+                case "Hideout": SetText(map_subrealm, "The Game"); break;
 
-                case "Manor": map_subrealm.Text = "Family Residence"; break;
+                case "Manor": SetText(map_subrealm, "Family Residence"); break;
 
-                case "Cottage": map_subrealm.Text = "Mount Ormond Resort"; break;
+                case "Cottage": SetText(map_subrealm, "Mount Ormond Resort"); break;
 
-                case "Lab": map_subrealm.Text = "The Underground Complex"; break;
+                case "Lab": SetText(map_subrealm, "The Underground Complex"); break;
             }
 
             //Icon
             switch (mapinfo[1])
             {
-                case "Asylum": mapPreview.Image = maps.Images[0]; break;
-                case "Chapel": mapPreview.Image = maps.Images[1]; break;
+                case "Asylum": SetMapPreview(mapPreview, 0); break;
+                case "Chapel": SetMapPreview(mapPreview, 1); break;
 
-                case "MaHouse": mapPreview.Image = maps.Images[2]; break;
-                case "Temple": mapPreview.Image = maps.Images[3]; break;
+                case "MaHouse": SetMapPreview(mapPreview, 2); break;
+                case "Temple": SetMapPreview(mapPreview, 3); break;
 
                 case "Street":
-                    if (mapRealm.Text == "Sub") mapPreview.Image = maps.Images[29];
-                    else if (mapRealm.Text == "Eng") mapPreview.Image = maps.Images[3 + int.Parse(mapinfo[2])]; break;
-                    //map_subrealm.Text = $"Badham Preschool {IDIndexToRoman(mapinfo[2])}";
+                    if (mapRealm.Text == "Sub") SetMapPreview(mapPreview, 29);
+                    else if (mapRealm.Text == "Eng") SetMapPreview(mapPreview, 3 + int.Parse(mapinfo[2].Replace("0", ""))); break;
 
-                case "Hideout": mapPreview.Image = maps.Images[9]; break;
+                case "Hideout": SetMapPreview(mapPreview, 9); break;
 
-                case "Barn": mapPreview.Image = maps.Images[10]; break;
-                case "Cornfield": mapPreview.Image = maps.Images[11]; break;
-                case "Farmhouse": mapPreview.Image = maps.Images[12]; break;
-                case "Silo": mapPreview.Image = maps.Images[13]; break;
-                case "Slaughterhouse": mapPreview.Image = maps.Images[14]; break;
+                case "Barn": SetMapPreview(mapPreview, 10); break;
+                case "Cornfield": SetMapPreview(mapPreview, 11); break;
+                case "Farmhouse": SetMapPreview(mapPreview, 12); break;
+                case "Silo": SetMapPreview(mapPreview, 13); break;
+                case "Slaughterhouse": SetMapPreview(mapPreview, 14); break;
 
-                case "Threatment": mapPreview.Image = maps.Images[15]; break;
+                case "Threatment": SetMapPreview(mapPreview, 15); break;
 
-                case "Manor": mapPreview.Image = maps.Images[16]; break;
+                case "Manor": SetMapPreview(mapPreview, 16); break;
 
-                case "CoalTower": mapPreview.Image = maps.Images[17]; break;
-                case "Forest": mapPreview.Image = maps.Images[18]; break;
-                case "Foundry": mapPreview.Image = maps.Images[19]; break;
-                case "Mine": mapPreview.Image = maps.Images[20]; break;
-                case "Storehouse": mapPreview.Image = maps.Images[21]; break;
+                case "CoalTower": SetMapPreview(mapPreview, 17); break;
+                case "Forest": SetMapPreview(mapPreview, 18); break;
+                case "Foundry": SetMapPreview(mapPreview, 19); break;
+                case "Mine": SetMapPreview(mapPreview, 20); break;
+                case "Storehouse": SetMapPreview(mapPreview, 21); break;
 
-                case "Garage": mapPreview.Image = maps.Images[22]; break;
-                case "GasStation": mapPreview.Image = maps.Images[23]; break;
-                case "Lodge": mapPreview.Image = maps.Images[24]; break;
-                case "Office": mapPreview.Image = maps.Images[25]; break;
-                case "Scrapyard": mapPreview.Image = maps.Images[26]; break;
+                case "Garage": SetMapPreview(mapPreview, 22); break;
+                case "GasStation": SetMapPreview(mapPreview, 23); break;
+                case "Lodge": SetMapPreview(mapPreview, 24); break;
+                case "Office": SetMapPreview(mapPreview, 25); break;
+                case "Scrapyard": SetMapPreview(mapPreview, 26); break;
 
-                case "Cottage": mapPreview.Image = maps.Images[27]; break;
+                case "Cottage": SetMapPreview(mapPreview, 27); break;
 
-                case "Lab": mapPreview.Image = maps.Images[28]; break;
+                case "Lab": SetMapPreview(mapPreview, 28); break;
 
-                case "Palerose": mapPreview.Image = maps.Images[30]; break;
-                case "GrimPantry": mapPreview.Image = maps.Images[31]; break;
+                case "Palerose": SetMapPreview(mapPreview, 30); break;
+                case "GrimPantry": SetMapPreview(mapPreview, 31); break;
 
             }
         }
@@ -254,36 +261,85 @@ namespace SnakeTail
             }
         }
 
-        public void UpdateKillerInfo(string fullLog, out string name)
+        public void UpdateKillerInfo(string fullLog)
         {
-            name = "";
             //Take only last section
             fullLog = fullLog.Substring(fullLog.LastIndexOf(" ") + 1);
+            if (fullLog.StartsWith("precached"))
+                return;
             fullLog = fullLog.Replace("BP_Slasher_Character_", "");
             fullLog = fullLog.Replace("_C_0", "");
             //Name
             switch (fullLog)
             {
-                case "01": killer_type.Text = "The Trapper"; break;
-                case "02": killer_type.Text = "The Wraith"; break;
-                case "03": killer_type.Text = "The Hillbilly"; break;
-                case "04": killer_type.Text = "The Nurse"; break;
-                case "05": killer_type.Text = "The Shape"; break;
-                case "06": killer_type.Text = "The Hag"; break;
-                case "07": killer_type.Text = "The Doctor"; break;
-                case "08": killer_type.Text = "The Huntress"; break;
-                case "09": killer_type.Text = "The Cannibal"; break;
-                case "10": killer_type.Text = "The Nightmare"; break;
-                case "11": killer_type.Text = "The Pig"; break;
-                case "12": killer_type.Text = "The Clown"; break;
-                case "13": killer_type.Text = "The Spirit"; break;
-                case "14": killer_type.Text = "The Legion"; break;
-                case "15": killer_type.Text = "The Plague"; break;
-                case "16": killer_type.Text = "The Ghost Face"; break;
-                case "17": killer_type.Text = "The Demogorgon"; break;
+                case "01": SetText(killer_type, "The Trapper"); break;
+                case "02": SetText(killer_type, "The Wraith"); break;
+                case "03": SetText(killer_type, "The Hillbilly"); break;
+                case "04": SetText(killer_type, "The Nurse"); break;
+                case "05": SetText(killer_type, "The Shape"); break;
+                case "06": SetText(killer_type, "The Hag"); break;
+                case "07": SetText(killer_type, "The Doctor"); break;
+                case "08": SetText(killer_type, "The Huntress"); break;
+                case "09": SetText(killer_type, "The Cannibal"); break;
+                case "10": SetText(killer_type, "The Nightmare"); break;
+                case "11": SetText(killer_type, "The Pig"); break;
+                case "12": SetText(killer_type, "The Clown"); break;
+                case "13": SetText(killer_type, "The Spirit"); break;
+                case "14": SetText(killer_type, "The Legion"); break;
+                case "15": SetText(killer_type, "The Plague"); break;
+                case "16": SetText(killer_type, "The Ghost Face"); break;
+                case "17": SetText(killer_type, "The Demogorgon"); break;
             }
             //Icon
-            killer_preview.Image = chars.Images[int.Parse(fullLog)];
+            SetKillerPreview(killer_preview, int.Parse(fullLog.StartsWith("0") ? fullLog.Replace("0", "") : fullLog));
+        }
+
+        delegate void SetTextCallback(Control item, string text);
+
+        private void SetText(Control set, string text)
+        {
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (DisplayInstance.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(SetText);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                set.Text = text;
+            }
+        }
+
+        delegate void SetMapPreviewCallback(PictureBox pic, int mapID);
+
+        private void SetMapPreview(PictureBox pic, int id)
+        {
+            if (DisplayInstance.InvokeRequired)
+            {
+                SetMapPreviewCallback m = new SetMapPreviewCallback(SetMapPreview);
+                this.Invoke(m, new object[] { id });
+            }
+            else
+            {
+                pic.Image = maps.Images[id];
+            }
+        }
+
+        delegate void SetKillerPreviewCallback(PictureBox pic, int mapID);
+
+        private void SetKillerPreview(PictureBox pic, int id)
+        {
+            if (DisplayInstance.InvokeRequired)
+            {
+                SetMapPreviewCallback m = new SetMapPreviewCallback(SetKillerPreview);
+                this.Invoke(m, new object[] { id });
+            }
+            else
+            {
+                pic.Image = chars.Images[id];
+            }
         }
     }
 }
