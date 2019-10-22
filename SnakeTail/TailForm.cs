@@ -1425,7 +1425,12 @@ namespace SnakeTail
             }
             catch (Exception ex)
             {
+#if DEBUG
+                Debug.WriteLine("Error processing line: " + (state as ExternalTool).GetVariable(ExternalTool.ParameterName.LineText));
+                Debug.WriteLine("The error is: " + ex.Message);
+#else
                 throw new ApplicationException("External Tool '" + tool.ToolConfig.Name + "' failed: " + ex.Message, ex);
+#endif
             }
         }
 

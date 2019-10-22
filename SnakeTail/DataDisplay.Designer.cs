@@ -33,12 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.settingState = new System.Windows.Forms.ToolStripMenuItem();
-            this.offerNameKiller = new System.Windows.Forms.Label();
-            this.killer_type = new System.Windows.Forms.Label();
-            this.killer_preview = new System.Windows.Forms.PictureBox();
-            this.map_subrealm = new System.Windows.Forms.Label();
-            this.mapRealm = new System.Windows.Forms.Label();
-            this.mapPreview = new System.Windows.Forms.PictureBox();
             this.settingPanel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,13 +41,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.offerNameKiller = new System.Windows.Forms.Label();
+            this.killer_type = new System.Windows.Forms.Label();
+            this.killer_preview = new System.Windows.Forms.PictureBox();
+            this.map_subrealm = new System.Windows.Forms.Label();
+            this.mapRealm = new System.Windows.Forms.Label();
+            this.mapPreview = new System.Windows.Forms.PictureBox();
             this.chars = new System.Windows.Forms.ImageList(this.components);
             this.maps = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.mainMenu.SuspendLayout();
+            this.settingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.killer_preview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mapPreview)).BeginInit();
-            this.settingPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,69 +88,6 @@
             this.settingState.Size = new System.Drawing.Size(131, 24);
             this.settingState.Text = "Settings";
             this.settingState.CheckedChanged += new System.EventHandler(this.ToolStripMenuItem1_CheckedChanged);
-            // 
-            // offerNameKiller
-            // 
-            this.offerNameKiller.AutoSize = true;
-            this.offerNameKiller.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.offerNameKiller.Location = new System.Drawing.Point(82, 129);
-            this.offerNameKiller.Name = "offerNameKiller";
-            this.offerNameKiller.Size = new System.Drawing.Size(181, 32);
-            this.offerNameKiller.TabIndex = 6;
-            this.offerNameKiller.Text = "[offering name]";
-            // 
-            // killer_type
-            // 
-            this.killer_type.AutoSize = true;
-            this.killer_type.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.killer_type.Location = new System.Drawing.Point(82, 97);
-            this.killer_type.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.killer_type.Name = "killer_type";
-            this.killer_type.Size = new System.Drawing.Size(68, 32);
-            this.killer_type.TabIndex = 5;
-            this.killer_type.Text = "Killer";
-            // 
-            // killer_preview
-            // 
-            this.killer_preview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.killer_preview.Location = new System.Drawing.Point(6, 97);
-            this.killer_preview.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.killer_preview.Name = "killer_preview";
-            this.killer_preview.Size = new System.Drawing.Size(64, 86);
-            this.killer_preview.TabIndex = 4;
-            this.killer_preview.TabStop = false;
-            // 
-            // map_subrealm
-            // 
-            this.map_subrealm.AutoSize = true;
-            this.map_subrealm.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.map_subrealm.Location = new System.Drawing.Point(82, 45);
-            this.map_subrealm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.map_subrealm.Name = "map_subrealm";
-            this.map_subrealm.Size = new System.Drawing.Size(120, 32);
-            this.map_subrealm.TabIndex = 3;
-            this.map_subrealm.Text = "sub realm";
-            // 
-            // mapRealm
-            // 
-            this.mapRealm.AutoSize = true;
-            this.mapRealm.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.mapRealm.Location = new System.Drawing.Point(82, 7);
-            this.mapRealm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.mapRealm.Name = "mapRealm";
-            this.mapRealm.Size = new System.Drawing.Size(129, 32);
-            this.mapRealm.TabIndex = 2;
-            this.mapRealm.Text = "map realm";
-            // 
-            // mapPreview
-            // 
-            this.mapPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mapPreview.Location = new System.Drawing.Point(6, 7);
-            this.mapPreview.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.mapPreview.Name = "mapPreview";
-            this.mapPreview.Size = new System.Drawing.Size(64, 86);
-            this.mapPreview.TabIndex = 1;
-            this.mapPreview.TabStop = false;
             // 
             // settingPanel
             // 
@@ -256,6 +193,68 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Settings";
             // 
+            // offerNameKiller
+            // 
+            this.offerNameKiller.AutoSize = true;
+            this.offerNameKiller.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.offerNameKiller.Location = new System.Drawing.Point(82, 129);
+            this.offerNameKiller.Name = "offerNameKiller";
+            this.offerNameKiller.Size = new System.Drawing.Size(0, 32);
+            this.offerNameKiller.TabIndex = 6;
+            // 
+            // killer_type
+            // 
+            this.killer_type.AutoSize = true;
+            this.killer_type.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.killer_type.Location = new System.Drawing.Point(82, 97);
+            this.killer_type.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.killer_type.Name = "killer_type";
+            this.killer_type.Size = new System.Drawing.Size(75, 32);
+            this.killer_type.TabIndex = 5;
+            this.killer_type.Text = "Killer";
+            // 
+            // killer_preview
+            // 
+            this.killer_preview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.killer_preview.Location = new System.Drawing.Point(6, 97);
+            this.killer_preview.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.killer_preview.Name = "killer_preview";
+            this.killer_preview.Size = new System.Drawing.Size(64, 86);
+            this.killer_preview.TabIndex = 4;
+            this.killer_preview.TabStop = false;
+            // 
+            // map_subrealm
+            // 
+            this.map_subrealm.AutoSize = true;
+            this.map_subrealm.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.map_subrealm.Location = new System.Drawing.Point(82, 45);
+            this.map_subrealm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.map_subrealm.Name = "map_subrealm";
+            this.map_subrealm.Size = new System.Drawing.Size(128, 32);
+            this.map_subrealm.TabIndex = 3;
+            this.map_subrealm.Text = "sub realm";
+            // 
+            // mapRealm
+            // 
+            this.mapRealm.AutoSize = true;
+            this.mapRealm.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mapRealm.Location = new System.Drawing.Point(82, 7);
+            this.mapRealm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.mapRealm.Name = "mapRealm";
+            this.mapRealm.Size = new System.Drawing.Size(137, 32);
+            this.mapRealm.TabIndex = 2;
+            this.mapRealm.Text = "map realm";
+            // 
+            // mapPreview
+            // 
+            this.mapPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mapPreview.Location = new System.Drawing.Point(6, 7);
+            this.mapPreview.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.mapPreview.Name = "mapPreview";
+            this.mapPreview.Size = new System.Drawing.Size(64, 86);
+            this.mapPreview.TabIndex = 1;
+            this.mapPreview.TabStop = false;
+            // 
             // chars
             // 
             this.chars.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("chars.ImageStream")));
@@ -330,10 +329,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.mainMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.killer_preview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mapPreview)).EndInit();
             this.settingPanel.ResumeLayout(false);
             this.settingPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.killer_preview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mapPreview)).EndInit();
             this.ResumeLayout(false);
 
         }

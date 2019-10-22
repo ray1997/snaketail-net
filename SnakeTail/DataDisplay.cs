@@ -21,6 +21,10 @@ namespace SnakeTail
                 }
                 return _displayInstance;
             }
+            set
+            {
+                _displayInstance = value;
+            }
         }
 
         private static bool _open;
@@ -88,6 +92,7 @@ namespace SnakeTail
 
         public void DisplayData(string line)
         {
+            System.Diagnostics.Debug.WriteLine("Processing line: " + line);
             //Processing line of texts
             //Offering
             if (line.Contains("GameFlow: OnlineContextComponent::SendOfferingsDataToUI"))

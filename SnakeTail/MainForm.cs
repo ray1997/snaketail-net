@@ -983,6 +983,8 @@ namespace SnakeTail
 
         public void OpenNewDisplayWindow()
         {
+            if (DataDisplay.DisplayInstance.IsDisposed)
+                DataDisplay.DisplayInstance = new DataDisplay();
             Application.Run(DataDisplay.DisplayInstance);
         }
     }
