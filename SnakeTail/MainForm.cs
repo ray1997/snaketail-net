@@ -980,5 +980,10 @@ namespace SnakeTail
                 tailForm.OpenExplorer();
             }
         }
+
+        public void OpenNewDisplayWindow()
+        {
+            Application.Run(DataDisplay.DisplayInstance);
+        }
     }
 }

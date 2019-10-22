@@ -1394,7 +1394,22 @@ namespace SnakeTail
             try
             {
                 if (tool != null)
-                    tool.Execute();
+                {
+                    if (tool.ToolConfig.Command == ExternalToolConfigForm.inAppDisplay)
+                    {
+                        if (!DataDisplay.IsOpen)
+                        {
+                            System.Threading.Thread open = new System.Threading.Thread(MainForm.Instance.OpenNewDisplayWindow);
+                            open.SetApartmentState(System.Threading.ApartmentState.STA);
+                            open.Start();
+                        }
+                        DataDisplay.DisplayInstance.DisplayData(ExternalTool.GetParameterSymbol(ExternalTool.ParameterName.LineText));
+                    }
+                    else
+                    {
+                        tool.Execute();
+                    }
+                }
             }
             catch (Exception ex)
             {
