@@ -75,6 +75,8 @@ namespace SnakeTail
             System.Diagnostics.Process.Start(startInfo);
         }
 
+        public string GetVariable(ParameterName parameter) => _fileParameters[parameter];
+
         private static bool IsAdministrator
         {
             get

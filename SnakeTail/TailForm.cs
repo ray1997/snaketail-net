@@ -1403,7 +1403,7 @@ namespace SnakeTail
                             open.SetApartmentState(System.Threading.ApartmentState.STA);
                             open.Start();
                         }
-                        DataDisplay.DisplayInstance.DisplayData(ExternalTool.GetParameterSymbol(ExternalTool.ParameterName.LineText));
+                        DataDisplay.DisplayInstance.DisplayData((state as ExternalTool).GetVariable(ExternalTool.ParameterName.LineText));
                     }
                     else
                     {
