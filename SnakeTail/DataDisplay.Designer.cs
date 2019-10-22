@@ -59,18 +59,18 @@
             // panel1
             // 
             this.panel1.ContextMenuStrip = this.mainMenu;
+            this.panel1.Controls.Add(this.settingPanel);
             this.panel1.Controls.Add(this.offerNameKiller);
             this.panel1.Controls.Add(this.killer_type);
             this.panel1.Controls.Add(this.killer_preview);
             this.panel1.Controls.Add(this.map_subrealm);
             this.panel1.Controls.Add(this.mapRealm);
             this.panel1.Controls.Add(this.mapPreview);
-            this.panel1.Controls.Add(this.settingPanel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(693, 300);
+            this.panel1.Size = new System.Drawing.Size(367, 217);
             this.panel1.TabIndex = 0;
             // 
             // mainMenu
@@ -92,57 +92,63 @@
             // offerNameKiller
             // 
             this.offerNameKiller.AutoSize = true;
-            this.offerNameKiller.Location = new System.Drawing.Point(141, 185);
+            this.offerNameKiller.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.offerNameKiller.Location = new System.Drawing.Point(82, 129);
             this.offerNameKiller.Name = "offerNameKiller";
-            this.offerNameKiller.Size = new System.Drawing.Size(208, 38);
+            this.offerNameKiller.Size = new System.Drawing.Size(181, 32);
             this.offerNameKiller.TabIndex = 6;
             this.offerNameKiller.Text = "[offering name]";
             // 
             // killer_type
             // 
             this.killer_type.AutoSize = true;
-            this.killer_type.Location = new System.Drawing.Point(141, 147);
+            this.killer_type.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.killer_type.Location = new System.Drawing.Point(82, 97);
             this.killer_type.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.killer_type.Name = "killer_type";
-            this.killer_type.Size = new System.Drawing.Size(79, 38);
+            this.killer_type.Size = new System.Drawing.Size(68, 32);
             this.killer_type.TabIndex = 5;
             this.killer_type.Text = "Killer";
             // 
             // killer_preview
             // 
-            this.killer_preview.Location = new System.Drawing.Point(6, 147);
+            this.killer_preview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.killer_preview.Location = new System.Drawing.Point(6, 97);
             this.killer_preview.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.killer_preview.Name = "killer_preview";
-            this.killer_preview.Size = new System.Drawing.Size(123, 136);
+            this.killer_preview.Size = new System.Drawing.Size(64, 86);
             this.killer_preview.TabIndex = 4;
             this.killer_preview.TabStop = false;
             // 
             // map_subrealm
             // 
             this.map_subrealm.AutoSize = true;
-            this.map_subrealm.Location = new System.Drawing.Point(141, 45);
+            this.map_subrealm.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.map_subrealm.Location = new System.Drawing.Point(82, 45);
             this.map_subrealm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.map_subrealm.Name = "map_subrealm";
-            this.map_subrealm.Size = new System.Drawing.Size(139, 38);
+            this.map_subrealm.Size = new System.Drawing.Size(120, 32);
             this.map_subrealm.TabIndex = 3;
             this.map_subrealm.Text = "sub realm";
             // 
             // mapRealm
             // 
             this.mapRealm.AutoSize = true;
-            this.mapRealm.Location = new System.Drawing.Point(141, 7);
+            this.mapRealm.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.mapRealm.Location = new System.Drawing.Point(82, 7);
             this.mapRealm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mapRealm.Name = "mapRealm";
-            this.mapRealm.Size = new System.Drawing.Size(149, 38);
+            this.mapRealm.Size = new System.Drawing.Size(129, 32);
             this.mapRealm.TabIndex = 2;
             this.mapRealm.Text = "map realm";
             // 
             // mapPreview
             // 
+            this.mapPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mapPreview.Location = new System.Drawing.Point(6, 7);
             this.mapPreview.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.mapPreview.Name = "mapPreview";
-            this.mapPreview.Size = new System.Drawing.Size(123, 136);
+            this.mapPreview.Size = new System.Drawing.Size(64, 86);
             this.mapPreview.TabIndex = 1;
             this.mapPreview.TabStop = false;
             // 
@@ -158,20 +164,20 @@
             this.settingPanel.Controls.Add(this.label2);
             this.settingPanel.Controls.Add(this.label1);
             this.settingPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.settingPanel.Location = new System.Drawing.Point(358, 0);
+            this.settingPanel.Location = new System.Drawing.Point(163, 0);
             this.settingPanel.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.settingPanel.Name = "settingPanel";
-            this.settingPanel.Size = new System.Drawing.Size(335, 300);
+            this.settingPanel.Size = new System.Drawing.Size(204, 217);
             this.settingPanel.TabIndex = 0;
             this.settingPanel.Visible = false;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.button2.Location = new System.Drawing.Point(240, 103);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.button2.Location = new System.Drawing.Point(136, 89);
             this.button2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 43);
+            this.button2.Size = new System.Drawing.Size(52, 31);
             this.button2.TabIndex = 6;
             this.button2.Text = "Set";
             this.button2.UseVisualStyleBackColor = true;
@@ -180,22 +186,22 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(9, 113);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(8, 96);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(165, 25);
+            this.label5.Size = new System.Drawing.Size(115, 19);
             this.label5.TabIndex = 5;
             this.label5.Text = "Transparent color";
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.checkBox2.Location = new System.Drawing.Point(12, 200);
+            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.checkBox2.Location = new System.Drawing.Point(12, 159);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(114, 32);
+            this.checkBox2.Size = new System.Drawing.Size(87, 23);
             this.checkBox2.TabIndex = 4;
             this.checkBox2.Text = "top most";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -206,11 +212,11 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.checkBox1.Location = new System.Drawing.Point(14, 162);
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.checkBox1.Location = new System.Drawing.Point(12, 128);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(121, 32);
+            this.checkBox1.Size = new System.Drawing.Size(91, 23);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Show title";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -218,11 +224,11 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.button1.Location = new System.Drawing.Point(240, 41);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.button1.Location = new System.Drawing.Point(136, 50);
             this.button1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 47);
+            this.button1.Size = new System.Drawing.Size(52, 35);
             this.button1.TabIndex = 2;
             this.button1.Text = "Set";
             this.button1.UseVisualStyleBackColor = true;
@@ -231,22 +237,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(9, 53);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 59);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 25);
+            this.label2.Size = new System.Drawing.Size(82, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Background";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 36);
+            this.label1.Size = new System.Drawing.Size(101, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Settings";
             // 
@@ -314,7 +320,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 300);
+            this.ClientSize = new System.Drawing.Size(367, 217);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);

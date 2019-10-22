@@ -95,22 +95,21 @@ namespace SnakeTail
                 //Reset match info
                 if (!offerNameKiller.Text.StartsWith("w/ "))
                 {
-                    mapPreview.Image = null;
-                    mapRealm.Text = "Loading...";
-                    map_subrealm.Text = "Loading...";
-                    killer_preview.Image = chars.Images[0];
-                    killer_type.Text = "Definitely not nea...";
-                    offerNameKiller.Text = "";
+                    SetText(mapRealm, "Loading...");
+                    SetText(map_subrealm, "Loading...");
+                    SetKillerPreview(killer_preview, 0);
+                    SetText(killer_type, "Definitely not nea...");
+                    SetText(offerNameKiller, "");
                 }
                 //Offering
                 if (line.Contains("mori"))
                 {
                     if (line.Contains("ebony"))
-                        offerNameKiller.Text = "w/ Ebony Mori";
+                        SetText(offerNameKiller, "w/ Ebony Mori");
                     else if (line.Contains("ivory"))
-                        offerNameKiller.Text = "w/ Ivory Mori";
+                        SetText(offerNameKiller, "w/ Ivory Mori");
                     else if (line.Contains("cypress"))
-                        offerNameKiller.Text = "w/ Cypress Mori";
+                        SetText(offerNameKiller, "w/ Cypress Mori");
                 }
             }
             //Map info
@@ -265,7 +264,7 @@ namespace SnakeTail
         {
             //Take only last section
             fullLog = fullLog.Substring(fullLog.LastIndexOf(" ") + 1);
-            if (fullLog.StartsWith("precached"))
+            if (!fullLog.StartsWith("BP_Slasher"))
                 return;
             fullLog = fullLog.Replace("BP_Slasher_Character_", "");
             fullLog = fullLog.Replace("_C_0", "");
@@ -301,10 +300,10 @@ namespace SnakeTail
             // InvokeRequired required compares the thread ID of the
             // calling thread to the thread ID of the creating thread.
             // If these threads are different, it returns true.
-            if (DisplayInstance.InvokeRequired)
+            if (this.InvokeRequired)
             {
                 SetTextCallback d = new SetTextCallback(SetText);
-                this.Invoke(d, new object[] { text });
+                this.Invoke(d, new object[] {set, text });
             }
             else
             {
@@ -316,10 +315,10 @@ namespace SnakeTail
 
         private void SetMapPreview(PictureBox pic, int id)
         {
-            if (DisplayInstance.InvokeRequired)
+            if (this.InvokeRequired)
             {
                 SetMapPreviewCallback m = new SetMapPreviewCallback(SetMapPreview);
-                this.Invoke(m, new object[] { id });
+                this.Invoke(m, new object[] { pic, id });
             }
             else
             {
@@ -331,10 +330,10 @@ namespace SnakeTail
 
         private void SetKillerPreview(PictureBox pic, int id)
         {
-            if (DisplayInstance.InvokeRequired)
+            if (this.InvokeRequired)
             {
                 SetMapPreviewCallback m = new SetMapPreviewCallback(SetKillerPreview);
-                this.Invoke(m, new object[] { id });
+                this.Invoke(m, new object[] { pic, id });
             }
             else
             {
