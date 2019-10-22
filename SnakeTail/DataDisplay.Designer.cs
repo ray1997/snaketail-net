@@ -50,6 +50,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.chars = new System.Windows.Forms.ImageList(this.components);
             this.maps = new System.Windows.Forms.ImageList(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.mainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.killer_preview)).BeginInit();
@@ -61,6 +63,8 @@
             // 
             this.panel1.ContextMenuStrip = this.mainMenu;
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.killer_type);
             this.panel1.Controls.Add(this.killer_preview);
@@ -72,7 +76,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(663, 436);
+            this.panel1.Size = new System.Drawing.Size(861, 426);
             this.panel1.TabIndex = 0;
             // 
             // mainMenu
@@ -169,10 +173,10 @@
             this.settingPanel.Controls.Add(this.label2);
             this.settingPanel.Controls.Add(this.label1);
             this.settingPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.settingPanel.Location = new System.Drawing.Point(325, 0);
+            this.settingPanel.Location = new System.Drawing.Point(523, 0);
             this.settingPanel.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.settingPanel.Name = "settingPanel";
-            this.settingPanel.Size = new System.Drawing.Size(338, 436);
+            this.settingPanel.Size = new System.Drawing.Size(338, 426);
             this.settingPanel.TabIndex = 0;
             this.settingPanel.Visible = false;
             // 
@@ -201,7 +205,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(14, 357);
+            this.checkBox2.Location = new System.Drawing.Point(14, 312);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(149, 42);
@@ -215,7 +219,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(14, 301);
+            this.checkBox1.Location = new System.Drawing.Point(14, 277);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(161, 42);
@@ -317,11 +321,29 @@
             this.maps.Images.SetKeyName(30, "iconMap_Swp_GrimPantry.png");
             this.maps.Images.SetKeyName(31, "iconMap_Swp_PaleRose.png");
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(159, 226);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(173, 38);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Killer bough:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(159, 264);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(208, 38);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "[offering name]";
+            // 
             // DataDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 436);
+            this.ClientSize = new System.Drawing.Size(861, 426);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
@@ -362,5 +384,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ImageList chars;
         private System.Windows.Forms.ImageList maps;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }
