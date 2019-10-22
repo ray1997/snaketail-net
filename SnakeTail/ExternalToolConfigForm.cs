@@ -24,13 +24,21 @@ namespace SnakeTail
 {
     partial class ExternalToolConfigForm : Form
     {
+        public const string inAppDisplay = "inappcmd";
+
         public ExternalToolConfig ExternalToolConfig { get; private set; }
 
         public ExternalToolConfigForm(ExternalToolConfig extenalToolConfig)
         {
             InitializeComponent();
             if (extenalToolConfig != null)
+            {
                 ExternalToolConfig = extenalToolConfig;
+                if (ExternalToolConfig.Command == inAppDisplay)
+                {
+                    checkBox1.Checked = true;
+                }
+            }
             else
             {
                 ExternalToolConfig = new ExternalToolConfig();
@@ -62,6 +70,13 @@ namespace SnakeTail
 
         private void _okBtn_Click(object sender, EventArgs e)
         {
+            if (checkBox1.Checked)
+            {
+                ExternalToolConfig.Name = _nameEdt.Text;
+                ExternalToolConfig.Command = inAppDisplay;
+                ExternalToolConfig.Arguments = _argsEdt.Text;
+                return;
+            }
             ExternalToolConfig.Name = _nameEdt.Text;
             ExternalToolConfig.Command = _cmdEdt.Text;
             ExternalToolConfig.Arguments = _argsEdt.Text;
@@ -143,6 +158,22 @@ namespace SnakeTail
         private void _shortcutEdt_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            _cmdEdt.Enabled = !checkBox1.Checked;
+            _browseCmdBtn.Enabled = !checkBox1.Checked;
+            _initDirEdt.Enabled = !checkBox1.Checked;
+            _initDirParamCmb.Enabled = !checkBox1.Checked;
+            _shortcutEdt.Enabled = !checkBox1.Checked;
+            _runAdminChk.Enabled = !checkBox1.Checked;
+            _hideWindowChk.Enabled = !checkBox1.Checked;
+
+            _argParamCmb.Text = checkBox1.Checked ? inAppDisplay : string.Empty;
+            _argsEdt.Text = checkBox1.Checked ? "$(LineText)" : string.Empty;
+            _argsEdt.Enabled = !checkBox1.Checked;
+            _argParamCmb.Enabled = !checkBox1.Checked;
         }
     }
 }
