@@ -50,8 +50,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.chars = new System.Windows.Forms.ImageList(this.components);
             this.maps = new System.Windows.Forms.ImageList(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.offerNameKiller = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.mainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.killer_preview)).BeginInit();
@@ -63,8 +62,7 @@
             // 
             this.panel1.ContextMenuStrip = this.mainMenu;
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.offerNameKiller);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.killer_type);
             this.panel1.Controls.Add(this.killer_preview);
@@ -321,23 +319,14 @@
             this.maps.Images.SetKeyName(30, "iconMap_Swp_GrimPantry.png");
             this.maps.Images.SetKeyName(31, "iconMap_Swp_PaleRose.png");
             // 
-            // label6
+            // offerNameKiller
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(159, 226);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 38);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Killer bough:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(159, 264);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(208, 38);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "[offering name]";
+            this.offerNameKiller.AutoSize = true;
+            this.offerNameKiller.Location = new System.Drawing.Point(159, 226);
+            this.offerNameKiller.Name = "offerNameKiller";
+            this.offerNameKiller.Size = new System.Drawing.Size(208, 38);
+            this.offerNameKiller.TabIndex = 6;
+            this.offerNameKiller.Text = "[offering name]";
             // 
             // DataDisplay
             // 
@@ -384,7 +373,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ImageList chars;
         private System.Windows.Forms.ImageList maps;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label offerNameKiller;
     }
 }
