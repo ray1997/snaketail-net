@@ -49,6 +49,7 @@
             this.mapPreview = new System.Windows.Forms.PictureBox();
             this.chars = new System.Windows.Forms.ImageList(this.components);
             this.maps = new System.Windows.Forms.ImageList(this.components);
+            this.testSetPicToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.mainMenu.SuspendLayout();
             this.settingPanel.SuspendLayout();
@@ -77,15 +78,16 @@
             // 
             this.mainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingState});
+            this.settingState,
+            this.testSetPicToToolStripMenuItem});
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(132, 28);
+            this.mainMenu.Size = new System.Drawing.Size(195, 52);
             // 
             // settingState
             // 
             this.settingState.CheckOnClick = true;
             this.settingState.Name = "settingState";
-            this.settingState.Size = new System.Drawing.Size(131, 24);
+            this.settingState.Size = new System.Drawing.Size(210, 24);
             this.settingState.Text = "Settings";
             this.settingState.CheckedChanged += new System.EventHandler(this.ToolStripMenuItem1_CheckedChanged);
             // 
@@ -319,6 +321,13 @@
             this.maps.Images.SetKeyName(30, "iconMap_Swp_GrimPantry.png");
             this.maps.Images.SetKeyName(31, "iconMap_Swp_PaleRose.png");
             // 
+            // testSetPicToToolStripMenuItem
+            // 
+            this.testSetPicToToolStripMenuItem.Name = "testSetPicToToolStripMenuItem";
+            this.testSetPicToToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.testSetPicToToolStripMenuItem.Text = "test random infos";
+            this.testSetPicToToolStripMenuItem.Click += new System.EventHandler(this.testSetPicToToolStripMenuItem_Click);
+            // 
             // DataDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
@@ -362,5 +371,6 @@
         private System.Windows.Forms.ImageList chars;
         private System.Windows.Forms.ImageList maps;
         private System.Windows.Forms.Label offerNameKiller;
+        private System.Windows.Forms.ToolStripMenuItem testSetPicToToolStripMenuItem;
     }
 }

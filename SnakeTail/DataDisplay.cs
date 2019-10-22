@@ -107,13 +107,13 @@ namespace SnakeTail
                     SetText(offerNameKiller, "");
                 }
                 //Offering
-                if (line.Contains("mori"))
+                if (line.Contains("Mori"))
                 {
-                    if (line.Contains("ebony"))
+                    if (line.Contains("Ebony"))
                         SetText(offerNameKiller, "w/ Ebony Mori");
-                    else if (line.Contains("ivory"))
+                    else if (line.Contains("Ivory"))
                         SetText(offerNameKiller, "w/ Ivory Mori");
-                    else if (line.Contains("cypress"))
+                    else if (line.Contains("Cypress"))
                         SetText(offerNameKiller, "w/ Cypress Mori");
                 }
             }
@@ -210,8 +210,8 @@ namespace SnakeTail
                 case "Temple": SetMapPreview(mapPreview, 3); break;
 
                 case "Street":
-                    if (mapRealm.Text == "Sub") SetMapPreview(mapPreview, 29);
-                    else if (mapRealm.Text == "Eng") SetMapPreview(mapPreview, 3 + int.Parse(mapinfo[2].Replace("0", ""))); break;
+                    if (mapinfo[0] == "Sub") SetMapPreview(mapPreview, 29);
+                    else if (mapinfo[0] == "Eng") SetMapPreview(mapPreview, 3 + int.Parse(mapinfo[2].Replace("0", ""))); break;
 
                 case "Hideout": SetMapPreview(mapPreview, 9); break;
 
@@ -241,8 +241,8 @@ namespace SnakeTail
 
                 case "Lab": SetMapPreview(mapPreview, 28); break;
 
-                case "Palerose": SetMapPreview(mapPreview, 30); break;
-                case "GrimPantry": SetMapPreview(mapPreview, 31); break;
+                case "GrimPantry": SetMapPreview(mapPreview, 30); break;
+                case "Palerose": SetMapPreview(mapPreview, 31); break;
 
             }
         }
@@ -344,6 +344,13 @@ namespace SnakeTail
             {
                 pic.Image = chars.Images[id];
             }
+        }
+
+        private void testSetPicToToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayData("[2019.10.20-07.39.35:846][972]GameFlow: OnlineContextComponent::SendOfferingsDataToUI --> Keep in cache offering Ivory Memento Mori");
+            DisplayData("[2019.10.22-18.21.04:081][ 39]ProceduralLevelGeneration: InitLevel: Theme: Suburbs Map: Sub_Street Generation Seed: -1");
+            DisplayData("[2019.10.19-09.11.21:686][742]LogPrimitivesRegisterer: Begin Adding Primitives for BP_Slasher_Character_04_C_0");
         }
     }
 }
