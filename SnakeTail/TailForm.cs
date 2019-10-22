@@ -1347,19 +1347,31 @@ namespace SnakeTail
                 ExternalToolConfig toolConfig = toolItem.Tag as ExternalToolConfig;
                 if (toolConfig != null)
                 {
-                    ExternalTool tool = null;
-                    if (_tailListView.FocusedItem != null)
-                        tool = GenerateExternalTool(toolConfig, _tailListView.FocusedItem.Text, _tailListView.FocusedItem.Index + 1, string.Empty);
-                    else
-                        tool = GenerateExternalTool(toolConfig, string.Empty, null, string.Empty);
-
-                    try
+                    if (toolConfig.Command == ExternalToolConfigForm.inAppDisplay)
                     {
-                        tool.Execute();
+                        if (!DataDisplay.IsOpen)
+                        {
+                            System.Threading.Thread open = new System.Threading.Thread(MainForm.Instance.OpenNewDisplayWindow);
+                            open.SetApartmentState(System.Threading.ApartmentState.STA);
+                            open.Start();
+                        }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show(this, "External Tool '" + toolConfig.Name + "' failed: " + ex.Message);
+                        ExternalTool tool = null;
+                        if (_tailListView.FocusedItem != null)
+                            tool = GenerateExternalTool(toolConfig, _tailListView.FocusedItem.Text, _tailListView.FocusedItem.Index + 1, string.Empty);
+                        else
+                            tool = GenerateExternalTool(toolConfig, string.Empty, null, string.Empty);
+
+                        try
+                        {
+                            tool.Execute();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(this, "External Tool '" + toolConfig.Name + "' failed: " + ex.Message);
+                        }
                     }
                 }
             }
