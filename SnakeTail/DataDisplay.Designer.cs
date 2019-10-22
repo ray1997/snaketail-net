@@ -319,7 +319,6 @@
             this.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "DataDisplay";
-            this.Text = "Log data display";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DataDisplay_FormClosed);
             this.Shown += new System.EventHandler(this.DataDisplay_Shown);
             this.panel1.ResumeLayout(false);
