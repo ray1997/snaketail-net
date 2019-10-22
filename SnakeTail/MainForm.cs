@@ -52,19 +52,20 @@ namespace SnakeTail
             _MDITabControl.ImageList.Images.Add(new Bitmap(Properties.Resources.GreenBulletIcon.ToBitmap()));
             _MDITabControl.ImageList.Images.Add(new Bitmap(Properties.Resources.YellowBulletIcon.ToBitmap()));
 
-            bool loadFromRegistry = false;
-            try
-            {
-                Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(_mruRegKey);
-                if (regKey != null)
-                    loadFromRegistry = true;
-            }
-            catch
-            {
-            }
+            LoadSession();
+            //bool loadFromRegistry = false;
+            //try
+            //{
+            //    Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(_mruRegKey);
+            //    if (regKey != null)
+            //        loadFromRegistry = true;
+            //}
+            //catch
+            //{
+            //}
 
-            saveRecentFilesToRegistryToolStripMenuItem.Checked = loadFromRegistry;
-            _mruMenu = new JWC.MruStripMenuInline(recentFilesToolStripMenuItem, recentFile1ToolStripMenuItem, new JWC.MruStripMenu.ClickedHandler(OnMruFile), _mruRegKey, loadFromRegistry, 10);
+            //saveRecentFilesToRegistryToolStripMenuItem.Checked = loadFromRegistry;
+            //_mruMenu = new JWC.MruStripMenuInline(recentFilesToolStripMenuItem, recentFile1ToolStripMenuItem, new JWC.MruStripMenu.ClickedHandler(OnMruFile), _mruRegKey, loadFromRegistry, 10);
         }
 
         private void UpdateTitle()
@@ -580,13 +581,34 @@ namespace SnakeTail
             }
         }
 
-        private bool LoadSession(string filepath)
+        private TailConfig LoadSessionFromResource()
         {
-            TailConfig tailConfig = LoadSessionFile(filepath);
+            TailConfig tailConfig = null;
+            try
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(TailConfig));
+                StringBuilder sb = new StringBuilder();
+
+                using (TextReader reader = new StringReader(Properties.Resources.dbd_session))
+                {
+                    tailConfig = serializer.Deserialize(reader) as TailConfig;
+                }
+                return tailConfig;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        private bool LoadSession(string filepath = null)
+        {
+            TailConfig tailConfig = filepath is null ? LoadSessionFromResource() : LoadSessionFile(filepath);
             if (tailConfig == null)
                 return false;
 
-            _mruMenu.AddFile(filepath);
+            if (!string.IsNullOrEmpty(filepath))
+                _mruMenu.AddFile(filepath);
 
             if (!tailConfig.MinimizedToTray)
             {
@@ -613,7 +635,7 @@ namespace SnakeTail
                 if (mdiForm != null)
                 {
                     ITailForm tailForm = mdiForm as ITailForm;
-                    string tailConfigPath = Path.GetDirectoryName(filepath);
+                    string tailConfigPath = string.IsNullOrEmpty(filepath) ? "In-app embedded config" : Path.GetDirectoryName(filepath);
 
                     mdiForm.Text = tailFile.Title;
                     if (!tailFile.Modeless)

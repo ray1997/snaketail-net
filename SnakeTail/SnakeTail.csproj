@@ -269,6 +269,7 @@
     <Content Include="dbd\map\iconMap_Swp_PaleRose.png" />
     <Content Include="Icons\bullet ball glass green.ico" />
     <Content Include="Icons\bullet ball glass yellow.ico" />
+    <Content Include="Icons\dbd_session.xml" />
     <Content Include="Icons\Error.png" />
     <Content Include="Icons\Info.png" />
     <Content Include="Icons\Snake.ico" />
