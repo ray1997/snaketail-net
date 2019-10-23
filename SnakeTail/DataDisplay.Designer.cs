@@ -33,7 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.settingState = new System.Windows.Forms.ToolStripMenuItem();
-            this.testSetPicToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingPanel = new System.Windows.Forms.Panel();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -50,14 +49,14 @@
             this.maps = new System.Windows.Forms.ImageList(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.dataDisplayBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.mainMenu.SuspendLayout();
             this.settingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.killer_preview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mapPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataDisplayBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,37 +73,31 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(405, 222);
+            this.panel1.Size = new System.Drawing.Size(405, 205);
             this.panel1.TabIndex = 0;
             // 
             // mainMenu
             // 
             this.mainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingState,
-            this.testSetPicToToolStripMenuItem});
+            this.settingState});
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(195, 52);
+            this.mainMenu.Size = new System.Drawing.Size(211, 56);
             // 
             // settingState
             // 
             this.settingState.CheckOnClick = true;
             this.settingState.Name = "settingState";
-            this.settingState.Size = new System.Drawing.Size(194, 24);
+            this.settingState.Size = new System.Drawing.Size(210, 24);
             this.settingState.Text = "Settings";
             this.settingState.CheckedChanged += new System.EventHandler(this.ToolStripMenuItem1_CheckedChanged);
-            // 
-            // testSetPicToToolStripMenuItem
-            // 
-            this.testSetPicToToolStripMenuItem.Name = "testSetPicToToolStripMenuItem";
-            this.testSetPicToToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
-            this.testSetPicToToolStripMenuItem.Text = "test random infos";
-            this.testSetPicToToolStripMenuItem.Click += new System.EventHandler(this.testSetPicToToolStripMenuItem_Click);
             // 
             // settingPanel
             // 
             this.settingPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.settingPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.settingPanel.Controls.Add(this.button2);
+            this.settingPanel.Controls.Add(this.label4);
             this.settingPanel.Controls.Add(this.trackBar1);
             this.settingPanel.Controls.Add(this.label3);
             this.settingPanel.Controls.Add(this.checkBox2);
@@ -116,7 +109,7 @@
             this.settingPanel.Location = new System.Drawing.Point(201, 0);
             this.settingPanel.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.settingPanel.Name = "settingPanel";
-            this.settingPanel.Size = new System.Drawing.Size(204, 222);
+            this.settingPanel.Size = new System.Drawing.Size(204, 205);
             this.settingPanel.TabIndex = 0;
             this.settingPanel.Visible = false;
             // 
@@ -124,7 +117,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.checkBox2.Location = new System.Drawing.Point(12, 159);
+            this.checkBox2.Location = new System.Drawing.Point(101, 167);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(87, 23);
@@ -139,7 +132,7 @@
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.checkBox1.Location = new System.Drawing.Point(12, 128);
+            this.checkBox1.Location = new System.Drawing.Point(10, 167);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(91, 23);
@@ -312,7 +305,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 96);
+            this.label3.Location = new System.Drawing.Point(8, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 19);
@@ -322,7 +315,7 @@
             // trackBar1
             // 
             this.trackBar1.AutoSize = false;
-            this.trackBar1.Location = new System.Drawing.Point(73, 96);
+            this.trackBar1.Location = new System.Drawing.Point(72, 124);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(124, 33);
@@ -332,15 +325,34 @@
             this.trackBar1.Value = 100;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
-            // dataDisplayBindingSource
+            // button2
             // 
-            this.dataDisplayBindingSource.DataSource = typeof(SnakeTail.DataDisplay);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.button2.Location = new System.Drawing.Point(136, 84);
+            this.button2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(52, 35);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Set";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(8, 93);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 19);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Foreground";
             // 
             // DataDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 222);
+            this.ClientSize = new System.Drawing.Size(405, 205);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
@@ -355,7 +367,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.killer_preview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mapPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataDisplayBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,9 +390,9 @@
         private System.Windows.Forms.ImageList chars;
         private System.Windows.Forms.ImageList maps;
         private System.Windows.Forms.Label offerNameKiller;
-        private System.Windows.Forms.ToolStripMenuItem testSetPicToToolStripMenuItem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.BindingSource dataDisplayBindingSource;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
     }
 }

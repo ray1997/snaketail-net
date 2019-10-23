@@ -44,17 +44,32 @@ namespace SnakeTail
             //Set background color
             using (ColorDialog color = new ColorDialog
             {
-                Color = panel1.BackColor
+                Color = this.BackColor
             })
             {
                 var result = color.ShowDialog();
                 if (result == DialogResult.OK)
                 {
-                    panel1.BackColor = color.Color;
+                    this.BackColor = color.Color;
                 }
-            }                
+            }
         }
-        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Set foreground color
+            using (ColorDialog color = new ColorDialog
+            {
+                Color = this.ForeColor
+            })
+            {
+                var result = color.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    this.ForeColor = color.Color;
+                }
+            }
+        }
         private void ToolStripMenuItem1_CheckedChanged(object sender, EventArgs e)
         {
             settingPanel.Visible = settingState.Checked;
@@ -332,18 +347,12 @@ namespace SnakeTail
             }
         }
 
-        private void testSetPicToToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DisplayData("[2019.10.20-07.39.35:846][972]GameFlow: OnlineContextComponent::SendOfferingsDataToUI --> Keep in cache offering Ivory Memento Mori");
-            DisplayData("[2019.10.22-18.21.04:081][ 39]ProceduralLevelGeneration: InitLevel: Theme: Suburbs Map: Sub_Street Generation Seed: -1");
-            DisplayData("[2019.10.19-09.11.21:686][742]LogPrimitivesRegisterer: Begin Adding Primitives for BP_Slasher_Character_04_C_0");
-        }
-
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             double converted = Convert.ToDouble(trackBar1.Value);
             converted /= 100;
             this.Opacity = converted;
         }
+
     }
 }
