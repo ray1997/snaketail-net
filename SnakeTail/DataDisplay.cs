@@ -55,20 +55,6 @@ namespace SnakeTail
             }                
         }
         
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            using (ColorDialog color = new ColorDialog
-            {
-                Color = this.TransparencyKey
-            })
-            {
-                var result = color.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-                    this.TransparencyKey = color.Color;
-                }
-            }
-        }
         private void ToolStripMenuItem1_CheckedChanged(object sender, EventArgs e)
         {
             settingPanel.Visible = settingState.Checked;
@@ -351,6 +337,13 @@ namespace SnakeTail
             DisplayData("[2019.10.20-07.39.35:846][972]GameFlow: OnlineContextComponent::SendOfferingsDataToUI --> Keep in cache offering Ivory Memento Mori");
             DisplayData("[2019.10.22-18.21.04:081][ 39]ProceduralLevelGeneration: InitLevel: Theme: Suburbs Map: Sub_Street Generation Seed: -1");
             DisplayData("[2019.10.19-09.11.21:686][742]LogPrimitivesRegisterer: Begin Adding Primitives for BP_Slasher_Character_04_C_0");
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            double converted = Convert.ToDouble(trackBar1.Value);
+            converted /= 100;
+            this.Opacity = converted;
         }
     }
 }
